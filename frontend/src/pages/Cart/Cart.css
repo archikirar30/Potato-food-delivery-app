@@ -1,0 +1,145 @@
+h2{
+    margin: 25px;
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.cart {
+  padding: 40px 80px;
+  min-height: 100vh;
+}
+
+.cart h2 {
+  margin-bottom: 25px;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.cart-main {
+  display: flex;
+  gap: 40px;
+}
+
+/* ---------------- CART ITEMS ---------------- */
+
+.cart-items {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.cart-item-img {
+  width: 95px;
+  height: 95px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cart-info {
+  flex: 1;
+  margin-left: 18px;
+}
+
+.cart-info h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.cart-price {
+  font-size: 17px;
+  color: #e15412;
+  font-weight: 600;
+}
+
+.cart-qty {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.cart-remove {
+  border: none;
+  background: #ffe6e6;
+  color: #d12c2c;
+  font-size: 22px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.cart-remove:hover {
+  background: #ffcccc;
+}
+
+/* ---------------- ORDER SUMMARY ---------------- */
+
+.cart-summary {
+  width: 35%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.cart-summary h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.summary-details,
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.summary-total {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 10px;
+  border-top: 1px solid #e3e3e3;
+  padding-top: 12px;
+}
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 0;
+  background: #ff6b00;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background: #e66000;
+}
+
+/* ------------ RESPONSIVE ----------- */
+
+@media (max-width: 900px) {
+  .cart-main {
+    flex-direction: column;
+  }
+
+  .cart-items, .cart-summary {
+    width: 100%;
+  }
+}

@@ -1,0 +1,86 @@
+.footer {
+  background: #0f0f0f;
+  color: #fff;
+  padding: 3rem 0;
+  margin-top: 4rem;
+  width: 100%;
+  border-radius: 30px 30px 0 0;
+}
+
+.footer-content {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 3rem;
+}
+
+/* LOGO + ABOUT */
+.footer-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6b00;
+}
+
+.footer-about p {
+  margin-top: 10px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* SOCIAL ICONS */
+.footer-socials {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.footer-socials svg:hover {
+  color: #ff6b00;
+  transition: 0.3s ease;
+}
+
+/* QUICK LINKS */
+.footer-section h3 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer-section ul li:hover {
+  color: #ff6b00;
+  transform: translateX(4px);
+}
+
+/* CONTACT SECTION */
+.footer-section p {
+  color: #ccc;
+  margin-bottom: 6px;
+}
+
+/* COPYRIGHT ROW */
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #999;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin-top: 2rem;
+}

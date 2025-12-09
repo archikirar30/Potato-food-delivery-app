@@ -1,0 +1,132 @@
+/* Background overlay */
+.login-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+/* Popup container */
+.login-popup-container {
+  width: 360px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 14px;
+  position: relative;
+  animation: fadeInScale 0.25s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeInScale {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Close icon */
+.login-popup-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #222;
+}
+
+.login-popup h2 {
+  text-align: center;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.login-popup-subtext {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.login-popup-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-popup-inputs input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+.login-popup-inputs input:focus {
+  border-color: #ff6b00;
+  box-shadow: 0 0 4px rgba(255, 107, 0, 0.3);
+}
+
+/* Login button */
+.login-popup-btn {
+  width: 100%;
+  padding: 13px;
+  margin-top: 18px;
+  background: #ff6b00;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.login-popup-btn:hover {
+  background: #ff7f26;
+}
+
+/* Bottom text */
+.login-popup-bottom {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: #444;
+}
+
+.login-popup-bottom span {
+  margin-left: 5px;
+  color: #ff6b00;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Terms & Conditions Section */
+.login-terms {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+.login-terms input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.login-terms label span {
+  color: #ff6b00;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Disable Login button if checkbox not checked */
+.login-popup-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

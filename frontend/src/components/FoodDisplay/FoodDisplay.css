@@ -1,0 +1,31 @@
+.food-display {
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.food-display h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* GRID LIST */
+.display-food-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.8rem;
+  place-items: center;
+}
+
+/* Mobile spacing */
+@media (max-width: 768px) {
+  .food-display {
+    margin-top: 2rem;
+  }
+
+  .food-display h2 {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,90 @@
+.explore-menu {
+  width: 90%;
+  margin: 3rem auto;
+}
+
+.explore-menu h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+.explore-menu-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* HORIZONTAL SCROLL CONTAINER */
+.explore-menu-list {
+  display: flex;
+  gap: 1.4rem;
+  overflow-x: auto;
+  padding-bottom: 10px;
+
+  /* Smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar (Chrome, Edge, Safari) */
+.explore-menu-list::-webkit-scrollbar {
+    display: none;
+  height: 0;
+}
+
+/* Hide scrollbar (Firefox) */
+.explore-menu-list {
+  scrollbar-width: none;
+}
+
+/* MENU CARD */
+.explore-menu-list div {
+  min-width: 130px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.explore-menu-list div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+.explore-menu-list .active{
+    border: 2px solid #ff9800;
+}
+
+/* CIRCULAR IMAGES */
+.explore-menu-list img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+}
+
+/* TITLE */
+.explore-menu-list h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .explore-menu-list div {
+    min-width: 110px;
+  }
+
+  .explore-menu-list img {
+    width: 75px;
+    height: 75px;
+  }
+}

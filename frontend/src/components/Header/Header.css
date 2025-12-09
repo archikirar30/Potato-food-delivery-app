@@ -1,0 +1,84 @@
+.header {
+  width: 90%;
+  height: 65vh;
+  margin: 2rem auto;           /* center & spacing from edges */
+  background-image: url('/header-img.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 25px;          /* rounded hero section */
+  overflow: hidden;             /* so radius also covers background image */
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+/* Dark overlay */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+/* CONTENT INSIDE */
+.header-contents {
+  position: relative;
+  width: 70%;
+  max-width: 600px;
+  
+  margin-left: 3rem;            /* inner margin */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header-contents h2 {
+  text-align: left;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.header-contents p {
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+.header-contents button {
+    width: fit-content;
+  margin-top: 10px;
+  padding: 12px 26px;
+  background: #ff9800;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.header-contents button:hover {
+  background: #e68a00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    width: 95%;
+    height: 50vh;
+  }
+
+  .header-contents {
+    margin-left: 1.5rem;
+    width: 85%;
+  }
+
+  .header-contents h2 {
+    font-size: 1.8rem;
+  }
+}

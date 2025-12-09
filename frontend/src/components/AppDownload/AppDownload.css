@@ -1,0 +1,108 @@
+.download-app {
+  width: 90%;
+  margin: 4rem auto;
+  padding: 3rem;
+  background: #ffffff;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  gap: 2rem;
+}
+
+/* LEFT CONTENT */
+.download-app-content {
+  flex: 1;
+}
+
+.download-app-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.download-app-content p {
+  margin-top: 10px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #555;
+}
+
+/* BUTTONS */
+.download-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.15);
+}
+
+.download-btn:hover {
+  transform: translateY(-4px);
+  background: #ff6b00;
+}
+
+.download-btn small {
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
+  opacity: 0.7;
+}
+
+.download-btn p {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ICONS */
+.download-btn svg {
+  font-size: 28px;
+}
+
+/* RIGHT SIDE IMAGE */
+.download-app-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.download-app-image img {
+  width: 80%;
+  max-width: 350px;
+  border-radius: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .download-app {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .download-buttons {
+    justify-content: center;
+  }
+
+  .download-app-image img {
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) {
+  .download-app-image img {
+    width: 75%;
+  }
+}
