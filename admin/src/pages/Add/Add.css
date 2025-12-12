@@ -1,0 +1,118 @@
+.add-food {
+margin-left: 250px; 
+  padding: 25px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+.add-food h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Image Preview Box */
+.image-preview-box {
+  width: fit-content;
+  padding: 10px;
+  height: 160px;
+  background: #f3f3f3;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.preview-image {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+}
+
+.no-preview {
+  color: #888;
+  font-size: 14px;
+}
+
+/* Adjust file input spacing */
+.input-group input[type="file"] {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+
+/* Form Groups */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #444;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background: #fafafa;
+  transition: 0.2s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: #ff7e00;
+  background: #fff;
+}
+
+/* Textarea */
+.input-group textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Submit Button */
+.submit-btn {
+  width:fit-content;
+  padding: 14px;
+  background-color: #ff7e00;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #e57000;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .add-food {
+    padding: 18px;
+  }
+  .submit-btn {
+    width: 100%;
+  }
+}
