@@ -3,7 +3,7 @@ import axios from "axios";
 import "./Add.css";
 import { toast } from "react-toastify";
 
-const Add = () => {
+const Add = ({url}) => {
   const [data, setData] = useState({
     name: "",
     description: "",
@@ -11,8 +11,6 @@ const Add = () => {
     category: "",
     image: null,
   });
-
-  const url = "http://localhost:4000"
 
   const [preview, setPreview] = useState(null);
 

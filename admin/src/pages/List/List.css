@@ -1,0 +1,82 @@
+.list {
+  width: 100%;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  margin-left: 250px;
+}
+
+.list h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Table */
+.list-table {
+  width: 100%;
+}
+
+.list-table-header {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.5fr 1fr 1fr;
+  padding: 12px 0;
+  border-bottom: 2px solid #e5e5e5;
+  font-weight: 600;
+  color: #444;
+}
+
+.list-table-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.5fr 1fr 1fr;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.list-table-row img {
+  width: 55px;
+  height: 55px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Delete Button */
+.delete-btn {
+  padding: 7px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #ff4d4f;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #e33b3d;
+}
+
+/* Empty state */
+.no-data {
+  margin-top: 20px;
+  text-align: center;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .list-table-header,
+  .list-table-row {
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+  }
+
+  .list-table-header span:nth-child(3),
+  .list-table-header span:nth-child(4),
+  .list-table-row p:nth-child(3),
+  .list-table-row p:nth-child(4) {
+    display: none;
+  }
+}

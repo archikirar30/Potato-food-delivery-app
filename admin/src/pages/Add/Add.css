@@ -1,10 +1,15 @@
 .add-food {
-margin-left: 250px; 
+  height: calc(100vh - 60px);
+  margin-left: 250px; 
   padding: 25px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   width: 100%;
+}
+
+.add-food::-webkit-scrollbar{
+  display: none;
 }
 
 .add-food h2 {
