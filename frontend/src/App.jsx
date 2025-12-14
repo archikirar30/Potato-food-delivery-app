@@ -8,12 +8,14 @@ import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
 import Footer from './components/Footer/Footer'
 import AppDownload from './components/AppDownload/AppDownload'
 import LoginPop from './components/LoginPop/LoginPop'
+import {ToastContainer} from "react-toastify"
 
 function App() {
   const [showLogin, setShowLogin] = useState(false)
 
   return (
     <>
+    <ToastContainer/>
       {showLogin && <LoginPop setShowLogin={setShowLogin} />}
       <Navbar setShowLogin={setShowLogin}/>
 

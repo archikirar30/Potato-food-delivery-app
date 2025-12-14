@@ -3,6 +3,7 @@ import './ExploreMenu.css'
 import { menuList } from '../../assets/assets'
 
 function ExploreMenu({category, setCategory}) {
+  
   return (
     <div className="explore-menu" id="explore-menu">
         <h1>Explore menu </h1>

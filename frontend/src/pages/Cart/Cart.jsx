@@ -5,7 +5,7 @@ import { IoTrashBin } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItem, food_list, removeFromItem, removeItem, getTotalCartAmount } = useContext(StoreContext);
+  const { cartItem, list, removeFromItem, removeItem, getTotalCartAmount,url } = useContext(StoreContext);
 
   const navigate = useNavigate()
 
@@ -16,11 +16,11 @@ const Cart = () => {
     <div className="cart-main">
 
       <div className="cart-items">
-        {food_list.map((item, index) => {
+        {list.map((item, index) => {
           if (cartItem?.[item._id] > 0) {
             return (
               <div className="cart-item" key={item._id}>
-                <img src={item.image} alt={item.name} className="cart-item-img" />
+                <img src={url+"/images/"+item.image} alt={item.name} className="cart-item-img" />
 
                 <div className="cart-info">
                   <h3>{item.name}</h3>

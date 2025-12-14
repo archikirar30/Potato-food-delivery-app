@@ -102,10 +102,87 @@
   background: #e68a00;
 }
 
+/* User Section */
+.user-section {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #444;
+}
+
+.user-info svg{
+  width: 20px;
+  height: 20px;
+}
+
+.user-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffcc00;
+}
+
+.username {
+  font-size: 16px;
+  color:#ffcc00;
+  font-weight: 600;
+}
+
+.arrow {
+  font-size: 20px;
+  width: 16px;
+  height: 16px;
+}
+
+/* Dropdown */
+.dropdown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 160px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.dropdown a,
+.dropdown button {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  background: #f5f5f5;
+}
+
+
 
 /* --------- RESPONSIVE --------- */
 
 @media (max-width: 768px) {
+
+  .dropdown {
+    right: auto;
+    left: 0;
+  }
+
   .nav-links {
     position: absolute;
     top: 70px;
