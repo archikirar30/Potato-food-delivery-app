@@ -1,0 +1,146 @@
+.admin-orders {
+  padding: 30px;
+  margin-left: 250px;
+  margin-bottom:100px;
+  width: 100%;
+}
+
+.admin-orders h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Table container */
+.orders-table {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.05);
+  overflow-x: auto;
+}
+
+/* Header + Row */
+.orders-header,
+.orders-row {
+  display: grid;
+  grid-template-columns: 
+    1.1fr 
+    1.4fr 
+    2.5fr 
+    2.5fr 
+    1fr 
+    1.4fr 
+    1.2fr;
+  gap: 14px;
+  padding: 16px 18px;
+  align-items: center;
+}
+
+.orders-header {
+  background: #f7f7f7;
+  font-weight: 600;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.orders-row {
+  font-size: 14px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.orders-row:last-child {
+  border-bottom: none;
+}
+
+/* Order ID */
+.order-id {
+  font-weight: 600;
+  color: #444;
+}
+
+/* Customer */
+.customer {
+  font-weight: 500;
+}
+
+/* Address */
+.address {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.address .phone {
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Items */
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: #444;
+}
+
+/* Amount */
+.amount {
+  font-weight: 600;
+  color: #ff4d4f;
+}
+
+/* Status */
+.status {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* Status colors */
+.status.pending {
+  background: #fff3cd;
+}
+
+.status.preparing {
+  background: #d1ecf1;
+}
+
+.status.out-for-delivery {
+  background: #e2e3ff;
+}
+
+.status.delivered {
+  background: #d4edda;
+}
+
+/* Date */
+.date {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Empty */
+.empty {
+  padding: 20px;
+  text-align: center;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .orders-header,
+  .orders-row {
+    grid-template-columns: 1fr 1.5fr 3fr 2fr;
+  }
+
+  .orders-header p:nth-child(5),
+  .orders-header p:nth-child(6),
+  .orders-header p:nth-child(7),
+  .orders-row .amount,
+  .orders-row select,
+  .orders-row .date {
+    display: none;
+  }
+}
