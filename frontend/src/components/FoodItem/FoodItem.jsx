@@ -6,12 +6,12 @@ import { StoreContext } from '../../context/StoreContext';
 
 const FoodItem = ({ id, name, description, image, price }) => {
 
-    const {cartItem, addToItem, removeFromItem} = useContext(StoreContext)
+    const {url,cartItem, addToItem, removeFromItem} = useContext(StoreContext)
 
     return (
         <div className="food-item">
             <div className="food-item-image-container">
-                <img src={image} className='food-item-image' alt='image' />
+                <img src={url+"/images/"+image} className='food-item-image' alt='image' />
                 {!cartItem[id] ? (
                     <IoIosAddCircleOutline
                         className='food-item-counter'

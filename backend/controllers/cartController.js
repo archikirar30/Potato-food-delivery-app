@@ -91,7 +91,7 @@ const getCart = async (req, res) => {
 
     const userId = req.user.id
     
-    let userData = await userModel.findById(userId);
+    let userData = await userModel.findById(req.user.id);
     let cartData = await userData.cartData || {};
 
     res.json({success:true, cartData})
