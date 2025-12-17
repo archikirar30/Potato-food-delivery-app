@@ -56,7 +56,7 @@ const Cart = () => {
 
         <div className="summary-total">
           <p>Total:</p>
-          <p>₹{(parseFloat(getTotalCartAmount()) + 20).toFixed(2)}</p>
+          <p>₹{(parseFloat(getTotalCartAmount()) + 30).toFixed(2)}</p>
         </div>
 
         <button onClick={()=>navigate("/place-order")} className="checkout-btn">Proceed to Checkout</button>

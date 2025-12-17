@@ -1,0 +1,142 @@
+.my-orders {
+  padding: 40px 8%;
+  min-height: 70vh;
+  background: #fafafa;
+}
+
+.my-orders h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  font-size: 16px;
+}
+
+/* Order List */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Order Card */
+.order-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Top Section */
+.order-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.order-id {
+  font-weight: 600;
+  color: #555;
+}
+
+.order-status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+/* Status colors */
+.order-status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.order-status.delivered {
+  background: #d4edda;
+  color: #155724;
+}
+
+.order-status.cancelled {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Items */
+.order-items {
+  margin: 15px 0;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.order-item-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.order-item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-item-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.order-item-qty {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Bottom Section */
+.order-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.order-total {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ff4d4f;
+}
+
+.order-date {
+  font-size: 13px;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .my-orders {
+    padding: 20px;
+  }
+
+  .order-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}

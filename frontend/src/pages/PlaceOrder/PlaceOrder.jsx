@@ -1,36 +1,93 @@
 import React, { useContext } from "react";
 import "./PlaceOrder.css";
 import { StoreContext } from "../../context/StoreContext";
+import { useState } from "react";
+import axios from "axios"
+import {toast} from "react-toastify"
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const PlaceOrder = () => {
-  const { cart_items, food_list } = useContext(StoreContext);
+  const { cartItem, food_list,getTotalCartAmount, token, url } = useContext(StoreContext);
 
-  const { getTotalCartAmount } = useContext(StoreContext);
+  const navigate = useNavigate()
   const deliveryFee = getTotalCartAmount() > 0 ? 30 : 0; // default 30
   const grandTotal = getTotalCartAmount() + deliveryFee;
+
+  const [data,setData]= useState({
+    firstName:"",
+    lastName:"",
+    email:"",
+    street:"",
+    city:"",
+    state:"",
+    zipcode:"",
+    country:"",
+    phone:""
+  })
+
+  const onChangeHandler =(event)=>{
+    const name = event.target.name;
+    const value = event.target.value;
+    setData(data=>({...data,[name]:value}))
+  }
+
+  const placeOrder = async(event)=>{
+    event.preventDefault();
+    let orderItems = [];
+    food_list.map((item,index)=>{
+      if(cartItem[item._id]>0){
+        let itemInfo = item;
+        itemInfo["quantity"]= cartItem[item._id];
+        orderItems.push(itemInfo);
+      }
+    })
+    let orderData = {
+      address:data,
+      items:orderItems,
+      amount:getTotalCartAmount()+20
+    }
+
+    let res = await axios.post(url+"/api/order/place",orderData,{headers:{token}})
+    if(res.data.success){
+      const {session_url} = res.data;
+      window.location.replace(session_url);
+    }else{
+      toast.error("Error");
+    }
+  }
+
+  useEffect(()=>{
+    if(!token){
+      navigate("/cart")
+    }else if(getTotalCartAmount()===0){
+      navigate("/cart")
+    }
+  },[])
 
   return (
     <div className="place-order">
       <h2>Checkout</h2>
 
-      <div className="order-container">
+      <form onSubmit={placeOrder} className="order-container">
 
         {/* LEFT SIDE — DELIVERY INFO */}
         <div className="delivery-info">
           <h3>Delivery Information</h3>
 
-          <form className="delivery-form">
-            <input type="text" placeholder="First Name" required />
-            <input type="text" placeholder="Last Name" required />
-            <input type="text" placeholder="Phone Number" required />
-            <input type="text" placeholder="Email" required />
-            <input type="text" placeholder="Street" required />
-            <input type="text" placeholder="Address Line 2" />
+          <div className="delivery-form">
+            <input name="firstName" onChange={onChangeHandler} value={data.firstName} type="text" placeholder="First Name" required />
+            <input name="lastName" onChange={onChangeHandler} value={data.lastName} type="text" placeholder="Last Name" required />
+            <input  name="phone" onChange={onChangeHandler} value={data.phone} type="number" placeholder="Phone Number" required />
+            <input name="email" onChange={onChangeHandler} value={data.email} type="text" placeholder="Email" required />
+            <input name="street" onChange={onChangeHandler} value={data.street} type="text" placeholder="Street" required />
+            <input name="city" onChange={onChangeHandler} value={data.city} type="text" placeholder="City" required/>
+            <input name="state" onChange={onChangeHandler} value={data.state} type="text" placeholder="State" required/>
             <div className="two-input">
-              <input type="text" placeholder="City" required />
-              <input type="text" placeholder="Postal Code" required />
+              <input name="country" onChange={onChangeHandler} value={data.country} type="text" placeholder="Country" required />
+              <input name="zipcode" onChange={onChangeHandler} value={data.zipcode} type="number" placeholder="Postal Code" required />
             </div>
-          </form>
+          </div>
         </div>
 
         {/* RIGHT SIDE — ORDER SUMMARY */}
@@ -39,7 +96,7 @@ const PlaceOrder = () => {
 
           <div className="summary-list">
             {food_list.map((item) => {
-              const qty = cart_items?.[item._id] || 0;
+              const qty = cartItem?.[item._id] || 0;
 
               if (qty > 0) {
                 return (
@@ -74,9 +131,9 @@ const PlaceOrder = () => {
             <p>₹{grandTotal.toFixed(2)}</p>
           </div>
 
-          <button className="place-order-btn">Confirm Order</button>
+          <button type="submit" className="place-order-btn">Confirm Order</button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

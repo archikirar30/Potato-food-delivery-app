@@ -82,7 +82,7 @@ function Navbar({ setShowLogin }) {
 
               {dropdownOpen && (
                 <div className="dropdown">
-                  <NavLink to="/orders" onClick={() => setDropdownOpen(false)}>
+                  <NavLink to="/myorders" onClick={() => setDropdownOpen(false)}>
                     Orders
                   </NavLink>
                   <button onClick={logoutHandler}>Logout</button>
