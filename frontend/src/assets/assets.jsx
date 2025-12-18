@@ -28,11 +28,11 @@ export const menuList = [
         menu_image:burger
     },
     {
-        menu_name:"Cake",
+        menu_name:"Desserts",
         menu_image:cake
     },
     {
-        menu_name:"Cold Coffee",
+        menu_name:"Coffee",
         menu_image:cold_coffee
     },
     {
