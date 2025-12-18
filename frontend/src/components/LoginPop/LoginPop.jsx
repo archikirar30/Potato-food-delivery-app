@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 export default function LoginPop({ setShowLogin }) {
 
   const {url,setToken} = useContext(StoreContext);
-  const [currState, setCurrState] = useState("Sign up")
+  const [currState, setCurrState] = useState("Sign in")
   const [isAgree, setIsAgree] = useState(false);
 
   const [data, setData] = useState({

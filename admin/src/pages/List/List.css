@@ -2,9 +2,9 @@
   width: 100%;
   background: #ffffff;
   padding: 25px;
-  border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   margin-left: 250px;
+  margin-bottom: 100px;
 }
 
 .list h2 {

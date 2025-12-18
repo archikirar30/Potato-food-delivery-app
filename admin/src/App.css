@@ -34,8 +34,6 @@
 .app-content > :first-child {
   width: 250px;
   flex-shrink: 0;
-  background: #111; /* your sidebar background */
-  color: white;
   height: calc(100vh - 60px);
   overflow-y: auto;
 }
