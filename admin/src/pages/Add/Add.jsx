@@ -126,15 +126,19 @@ const Add = ({url}) => {
             required
           >
             <option value="">Select a category</option>
-            <option value="salad">Salad</option>
-            <option value="pizza">Pizza</option>
-            <option value="burger">Burger</option>
-            <option value="noodles">Noodles</option>
-            <option value="pasta">Pasta</option>
-            <option value="dessert">Dessert</option>
-            <option value="rolls">Rolls</option>
-            <option value="drinks">Drinks</option>
-            <option value="sandwich">Sandwich</option>
+            <option value="Salad">Salad</option>
+            <option value="Pizza">Pizza</option>
+            <option value="Burger">Burger</option>
+            <option value="Noodles">Noodles</option>
+            <option value="Pasta">Pasta</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Idli">Idli</option>
+            <option value="Pav Baaji">Pav Baaji</option>
+            <option value="Fried Rice">Fried Rice</option>
+            <option value="French Fries">French Fries</option>
+            <option value="Rolls">Rolls</option>
+            <option value="Drinks">Drinks</option>
+            <option value="Sandwich">Sandwich</option>
           </select>
         </div>
 
