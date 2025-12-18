@@ -7,7 +7,7 @@ The platform includes both a **user-facing application** and a **dedicated admin
 
 ## 🎥 Demo Video
 
-▶️ [Click here to watch the demo](potato-demo.mp4)
+https://github.com/user-attachments/assets/22f7ed1a-c157-49c0-944f-d8750e993f9a
 
 ## 🚀 Features
 
