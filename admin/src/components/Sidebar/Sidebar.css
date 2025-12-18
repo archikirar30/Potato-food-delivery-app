@@ -1,12 +1,12 @@
 .sidebar {
   width: 240px;
   height: 100vh;
-  background: #0f0f0f;
-  color: #fff;
+  background: #fff;
+  color: #1a1a1a;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  border-right: 1px solid #222;
+  border-right: 1px solid #fbc899;
   position: fixed;
 }
 
@@ -35,6 +35,7 @@
 
 .sidebar-menu li:hover {
   background: #1a1a1a;
+  color: #fff6ed;
 }
 
 .sidebar-menu li .active {
@@ -47,10 +48,12 @@
   gap: 12px;
   padding: 12px 10px;
   cursor: pointer;
-  border-top: 1px solid #222;
+  border-top:1px solid #fbc899;
   transition: 0.3s ease;
 }
 
 .sidebar-footer:hover {
   background: #1a1a1a;
+  color:#fff6ed;
+  border-radius: 8px;
 }
